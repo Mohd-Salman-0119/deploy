@@ -10,7 +10,7 @@ app.get("/ping",(req,res)=>{
      res.send({msg: "pong"})
 })
 app.get("/welcome",(req,res)=>{
-     res.send({msg: "Hello"})
+     res.send({msg: `Hello ${process.env.NAME}`})
 })
 const PORT = process.env.PORT;
 app.listen(PORT, ()=>{
